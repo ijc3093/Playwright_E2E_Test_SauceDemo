@@ -60,11 +60,16 @@ For an interactive experience with a test runner UI, use:
 Run a Specific Test File
 To run a specific test file, such as the one in this project, use the following command:
 
-    npx playwright test tests/SauceDemo.spec.ts
+    npx playwright test tests/Main.spec.ts
 
 Run Headless or Headed
 Tests run in headless mode by default (the browser is not visible). To run tests in headed mode (with the browser visible), use the --headed flag:
+    
+    npx playwright test tests/Main.spec.ts --headed
 
-    npm test -- --headed
+Run debug
+Tests run in debug mode by using End-to-end. To run tests in debug mode (with the browser visible), use the --debug flag:
+
+    npx playwright test tests/Main.spec.ts --debug
 
 If you have any questions or would like to contribute, please refer to the project's code and documentation.
