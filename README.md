@@ -106,3 +106,14 @@ The architecture is based on the interaction of these components:
 3. Test Execution (Browser Automation): 
     - Playwright automates interactions with SauceDemo by running TypeScript commands in the browser, such as clicking buttons and filling forms.
     - It relies on built-in locators and auto-wait methods to verify that elements are ready before performing operations, resulting in more robust tests.
+
+
+The test suite's long-term health was considered when the project's architecture and strategic decisions were decided.  The goal was to develop a framework that would be simple to read, maintain, and scale for years.
+
+# Project Architecture
+The project is built on three core pillars:
+- The Page Object Model (POM): It serves as the foundation for the test suite. Instead of clogging up tests with web selectors, all element locations and interactions for a certain page (such as the Login or Products page) are concentrated in their own classes. 
+- Playwright Fixtures are used for developing a specified state prior to running a test. For example, the loggedInPage fixture takes care of the login procedure automatically.
+- Utility/Helper Functions: Reusable logic that is not specific to a page, such as developing a random zip code for a checkout form, is stored in a separate utils directory.  This keeps Page Objects lean and focused on their primary function: interacting with UI elements.
+
+So, these architectural and strategic decisions were made to ensure that the test suite is not only functional, but also of high quality and long-term value to any team.
