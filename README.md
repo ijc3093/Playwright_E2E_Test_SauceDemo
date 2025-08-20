@@ -16,13 +16,13 @@ This test suite was developed following the "Five-Year" Philosophy, emphasizing 
 # Project Structure
 The project is organized into the following directories to maintain a clear separation of concerns:
 
-        src/: Contains all the test-related code.
+    src/: Contains all the test-related code.
 
-        pages/: A directory for all Page Object Model classes.
+    pages/: A directory for all Page Object Model classes.
 
-        utils/: A directory for reusable helper and utility functions.
+    utils/: A directory for reusable helper and utility functions.
 
-        tests/: A directory for all .spec.ts test files.
+    tests/: A directory for all .spec.ts test files.
 
 # Setup Instructions
 To get this project up and running, follow these simple steps.
