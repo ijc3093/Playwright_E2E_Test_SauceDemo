@@ -45,9 +45,13 @@ Use npm to install all of the required packages. This will also install the Play
 
 # Using VS Code extension
 1. Step 1: Create a new folder and open in VS Code
+
     - Go to Extensions section and install Playwright extension from Microsoft
+
     - Go to View tab and select "Command Palett.." to display "> Command Palette and type playwright >" then select select "install playwright"
+
     - Select the browsers and click ok
+    
     - It will install the libraries and create the project folders
 
 
@@ -88,15 +92,21 @@ Here is an architectural explanation of how to automate testing for SauceDemo Sw
 
 # Core components and their interactions
 The architecture is based on the interaction of these components:
+
     - TypeScript: A superset of JavaScript that provides static typing to improve code maintainability and debugging.
+
     - CLI (Command Line Interface): Used to run Playwright tests and maybe configure test runs (e.g., certain browsers, parallelism).
+
     - Playwright: An open-source testing platform that allows for accurate cross-browser end-to-end testing.
+
     - Browser: The web browser (Chromium, Firefox, Safari, etc.) in which the tests are executed.
     - Node.js: The JavaScript runtime environment that runs between Playwright and TypeScript code using Visual Studio Code.
 
 # How these components interact as follows:
 1. Creating Test Scripts (TypeScript/Node.js): 
+
     - Use TypeScript for stronger typing and greater tooling support.
+
     - These scripts define the actions that will be done on the SauceDemo application (for example, login, sorting the price, asce and desc, add items to cart, and checkout) as well as the expected results.
 
 2. Playwright and Browser Launch: 
@@ -104,6 +114,7 @@ The architecture is based on the interaction of these components:
     - To provide effective interaction and control, Playwright interfaces with the browser via the Chrome DevTools Protocol (CDP) and WebSockets.
 
 3. Test Execution (Browser Automation): 
+
     - Playwright automates interactions with SauceDemo by running TypeScript commands in the browser, such as clicking buttons and filling forms.
 
     - It relies on built-in locators and auto-wait methods to verify that elements are ready before performing operations, resulting in more robust tests.
@@ -113,6 +124,7 @@ The test suite's long-term health was considered when the project's architecture
 
 # Project Architecture
 The project is built on three core pillars:
+    
     - The Page Object Model (POM): It serves as the foundation for the test suite. Instead of clogging up tests with web selectors, all element locations and interactions for a certain page (such as the Login or Products page) are concentrated in their own classes. 
 
     - Playwright Fixtures are used for developing a specified state prior to running a test. For example, the loggedInPage fixture takes care of the login procedure automatically.
@@ -121,6 +133,7 @@ The project is built on three core pillars:
 
 # Strategic Decisions
 Aside from the fundamental design, some important decisions were made to handle sophisticated scenarios and ensure the test suite is robust:
+    
     - Handling the Performance Glitch User: Rather of utilizing a static waitForTimeout() function, which can make testing slow and unreliable, we use Playwright's built-in auto-waiting feature.  Playwright intelligently waits for items to become visible and actionable before taking an action, automatically mitigating performance lag without relying on fragile, hardcoded delays.
 
     - Verifying Broken Images: For the problem_user, simply testing if an image is viewable is insufficient, as a broken picture may still be displayed. The test's assertion takes a step further, directly verifying the image element's src attribute to ensure it points to the known broken image URL (/static/media/sl-404.168b1cce.jpg).
