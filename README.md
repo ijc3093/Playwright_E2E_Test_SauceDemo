@@ -138,7 +138,7 @@ The project is built on three core pillars:
 # Strategic Decisions
 Aside from the fundamental design, some important decisions were made to handle sophisticated scenarios and ensure the test suite is robust:
     
-    - Handling the Performance Glitch User: Rather of utilizing a static waitForTimeout() function, which can make testing slow and unreliable, we use Playwright's built-in auto-waiting feature.  Playwright intelligently waits for items to become visible and actionable before taking an action, automatically mitigating performance lag without relying on fragile, hardcoded delays.
+    - Handling the Performance Glitch User: Rather of utilizing a static waitForTimeout() function, which can make testing slow and unreliable, use Playwright's built-in auto-waiting feature.  Playwright intelligently waits for items to become visible and actionable before taking an action, automatically mitigating performance lag without relying on fragile, hardcoded delays.
 
     - Verifying Broken Images: For the problem_user, simply testing if an image is viewable is insufficient, as a broken picture may still be displayed. The test's assertion takes a step further, directly verifying the image element's src attribute to ensure it points to the known broken image URL (/static/media/sl-404.168b1cce.jpg).
 
