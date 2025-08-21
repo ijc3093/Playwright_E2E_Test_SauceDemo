@@ -6,7 +6,7 @@ This test suite was developed using the "Five-Year" philosophy, which emphasizes
 
     - The Page Object Model (POM) abstracts all selectors and page-specific interactions into dedicated page classes (e.g., LoginPage.ts, ProductsPage.ts, CartPage.ts, CheckoutPage.ts and CheckoutOveriewPage).  This maintains test files clean, readable, and focused on the user experience.
 
-    - A custom loggedInPage fixture is used to handle test state and minimize redundant login procedures.  This encourages code reuse and ensures a tidy test body..
+    - A custom loggedInPage fixture is used to handle test state and minimize redundant login procedures. This encourages code reuse and ensures a tidy test body.
 
     - Utility/Helper Functions: Reusable logic, such as data generators, is placed in a separate utils directory to keep our core test and page object files focused.
 
@@ -38,7 +38,7 @@ Node.js (version 18 or higher recommended)
     Note: Because this is a sample project, simply copy the provided code files and arrange them in the appropriate directory structure.
 
 2. Install Dependencies
-Use npm to install all of the required packages.  This will also install the Playwright browser.
+Use npm to install all of the required packages. This will also install the Playwright browser.
     npm install
     or, if you use yarn
     yarn install
