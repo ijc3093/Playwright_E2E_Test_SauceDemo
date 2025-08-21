@@ -116,4 +116,10 @@ The project is built on three core pillars:
 - Playwright Fixtures are used for developing a specified state prior to running a test. For example, the loggedInPage fixture takes care of the login procedure automatically.
 - Utility/Helper Functions: Reusable logic that is not specific to a page, such as developing a random zip code for a checkout form, is stored in a separate utils directory.  This keeps Page Objects lean and focused on their primary function: interacting with UI elements.
 
+# Strategic Decisions
+Aside from the fundamental design, some important decisions were made to handle sophisticated scenarios and ensure the test suite is robust:
+- Verifying Broken Images: For the problem_user, simply testing if an image is viewable is insufficient, as a broken picture may still be displayed. The test's assertion takes a step further, directly verifying the image element's src attribute to ensure it points to the known broken image URL (/static/media/sl-404.168b1cce.jpg).
+- Validating Product Sorting: The product sorting test employs a strong two-step technique. First, it starts the sorting process on the page. Then it retrieves the list of prices, makes a copy of it, organizes it in memory, and compares the two lists. This method provides a high level of assurance that the objects are correctly sorted, as opposed to simply testing if the UI looks right.
+
 So, these architectural and strategic decisions were made to ensure that the test suite is not only functional, but also of high quality and long-term value to any team.
+
