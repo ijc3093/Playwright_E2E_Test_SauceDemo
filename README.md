@@ -83,7 +83,7 @@ How to Run the Tests
 
 
 # Architecture Screen
-![Screenshot](https://github.com/ijc3093/Playwright_E2E_Test_SauceDemo/blob/master/Blank%20Diagram.png)
+![Screenshot](https://github.com/ijc3093/Playwright_E2E_Test_SauceDemo/blob/master/Blank%20Diagram.svg)
 Here is an architectural explanation of how to automate testing for SauceDemo Swag Labs with Playwright, a browser, TypeScript, and Node.js:
 
 # Core components and their interactions
