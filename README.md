@@ -32,7 +32,7 @@ Node.js (version 18 or higher recommended)
     npm (or yarn)
 
 1. Clone the Repository (or copy files)
-    git clone https://github.com/your-username/saucedemo-playwright.git
+    git clone https://github.com/ijc3093/Playwright_E2E_Test_SauceDemo.git
     cd saucedemo-playwright
 
     Note: Because this is a sample project, simply copy the provided code files and arrange them in the appropriate directory structure.
@@ -51,7 +51,7 @@ Use npm to install all of the required packages. This will also install the Play
     - Go to View tab and select "Command Palett.." to display "> Command Palette and type playwright >" then select select "install playwright"
 
     - Select the browsers and click ok
-    
+
     - It will install the libraries and create the project folders
 
 
