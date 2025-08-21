@@ -33,15 +33,19 @@ Node.js (version 18 or higher recommended)
 
 1. Clone the Repository (or copy files)
     git clone https://github.com/ijc3093/Playwright_E2E_Test_SauceDemo.git
-    cd saucedemo-playwright
+    
+        cd Playwright_E2E_Test_SauceDemo
 
-    Note: Because this is a sample project, simply copy the provided code files and arrange them in the appropriate directory structure.
+        Note: Because this is a sample project, simply copy the provided code files and arrange them in the appropriate directory structure.
 
 2. Install Dependencies
-Use npm to install all of the required packages. This will also install the Playwright browser.
-    npm install
-    or, if you use yarn
-    yarn install
+        
+        Use npm to install all of the required packages. This will also install the Playwright browser.
+        
+        npm install
+        or, if you use yarn
+
+        yarn install
 
 # Using VS Code extension
 1. Step 1: Create a new folder and open in VS Code
