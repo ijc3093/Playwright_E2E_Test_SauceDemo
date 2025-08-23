@@ -146,3 +146,33 @@ Aside from the fundamental design, some important decisions were made to handle 
 
 So, these architectural and strategic decisions were made to ensure that the test suite is not only functional, but also of high quality and long-term value to any team.
 
+### User Stories
+- UI Automation
+  - Log into the site
+  - Sort the items (Lowest Price sort)
+  - Sort the items (Highest Price sort)
+  - Add two or more items to the shopping cart
+  - Visit the shopping cart
+  - Assert that the items that you added are in the cart
+  - Remove an item and then continue shopping
+  - Add another item
+  - Checkout
+  - Assert you are purchasing the correct items
+  - Assert the total price
+  - Finish checkout
+  - Thank you for your order
+
+### Functionality
+The test functionality includes:
+* UI
+  * Login
+    * User login with registered credentials
+  * Inventory/Cart
+    * User sort inventory items
+    * User add items to shopping cart
+    * User remove items from shopping cart
+    * User visit the shopping cart
+  * Checkout
+    * User confirm items added
+    * User confirm total amount
+    * User checkout
