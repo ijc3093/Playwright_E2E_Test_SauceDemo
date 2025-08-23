@@ -126,7 +126,7 @@ The architecture is based on the interaction of these components:
 
 The test suite's long-term health was considered when the project's architecture and strategic decisions were decided.  The goal was to develop a framework that would be simple to read, maintain, and scale for years.
 
-# Project Architecture
+### Project Architecture
 The project is built on three core pillars:
     
     - The Page Object Model (POM): It serves as the foundation for the test suite. Instead of clogging up tests with web selectors, all element locations and interactions for a certain page (such as the Login or Products page) are concentrated in their own classes. 
