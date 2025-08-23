@@ -146,7 +146,7 @@ Aside from the fundamental design, some important decisions were made to handle 
 
 So, these architectural and strategic decisions were made to ensure that the test suite is not only functional, but also of high quality and long-term value to any team.
 
-### User Stories
+### User Scenario
 - UI Automation
   - Log into the site
   - Sort the items (Lowest Price sort)
