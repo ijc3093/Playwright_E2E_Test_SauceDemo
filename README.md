@@ -1,7 +1,7 @@
 ### Playwright E2E Test SauceDemo
 This project includes a thorough end-to-end (E2E) test suite for the SauceDemo application, which was developed with TypeScript and Playwright. To guarantee a scalable, maintainable, and supportive architecture, the test suite is created using fixtures, utility functions, and the Page Object Model (POM) design pattern. This post shows how to create an automated test for "www.SauceDemo.cow" using Playwright's built-in test runner, @playwright/test, and Node.js. Also, this purpose is to ensure that the application's functions are verified when testing it.
 
-# Technical & Structural Requirements
+### Technical & Structural Requirements
 This test suite was developed using the "Five-Year" philosophy, which emphasizes long-term code quality and collaboration.
 
     - The Page Object Model (POM) abstracts all selectors and page-specific interactions into dedicated page classes (e.g., LoginPage.ts, ProductsPage.ts, CartPage.ts, CheckoutPage.ts and CheckoutOveriewPage).  This maintains test files clean, readable, and focused on the user experience.
