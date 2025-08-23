@@ -1,4 +1,4 @@
-# Playwright E2E Test SauceDemo
+### Playwright E2E Test SauceDemo
 This project includes a thorough end-to-end (E2E) test suite for the SauceDemo application, which was developed with TypeScript and Playwright. To guarantee a scalable, maintainable, and supportive architecture, the test suite is created using fixtures, utility functions, and the Page Object Model (POM) design pattern. This post shows how to create an automated test for "www.SauceDemo.cow" using Playwright's built-in test runner, @playwright/test, and Node.js. Also, this purpose is to ensure that the application's functions are verified when testing it.
 
 # Technical & Structural Requirements
@@ -12,7 +12,7 @@ This test suite was developed using the "Five-Year" philosophy, which emphasizes
 
     - Data-Test Selectors: All key element selectors rely on the application's data-test attributes.  This makes the tests more resistant to changes to the user interface.
 
-# Project Structure
+### Project Structure
 The project is broken down into the following directories to maintain a clear separation of objectives.
 
     src/: Contains all of the test-related code.
@@ -23,10 +23,10 @@ The project is broken down into the following directories to maintain a clear se
 
     tests/: A directory containing all.spec.ts test files.
 
-# Setup Instructions
+### Setup Instructions
 To get this project up and running, follow these simple steps.
 
-# Prerequisites
+### Prerequisites
 Node.js (version 18 or higher recommended)
 
     npm (or yarn)
@@ -47,7 +47,7 @@ Node.js (version 18 or higher recommended)
 
         yarn install
 
-# Using VS Code extension
+### Using VS Code extension
 1. Step 1: Create a new folder and open in VS Code
 
     - Go to Extensions section and install Playwright extension from Microsoft
@@ -90,11 +90,11 @@ How to Run the Tests
     If you have any queries or want to contribute, please see the project's code and documentation.
 
 
-# Architecture Screen
+### Architecture Screen
 ![Screenshot](https://github.com/ijc3093/Playwright_E2E_Test_SauceDemo/blob/master/Blank%20Diagram.svg)
 Here is an architectural explanation of how to automate testing for SauceDemo Swag Labs with Playwright, a browser, TypeScript, and Node.js:
 
-# Core components and their interactions
+### Core components and their interactions
 The architecture is based on the interaction of these components:
 
     - TypeScript: A superset of JavaScript that provides static typing to improve code maintainability and debugging.
@@ -106,7 +106,7 @@ The architecture is based on the interaction of these components:
     - Browser: The web browser (Chromium, Firefox, Safari, etc.) in which the tests are executed.
     - Node.js: The JavaScript runtime environment that runs between Playwright and TypeScript code using Visual Studio Code.
 
-# How these components interact as follows:
+### How these components interact as follows:
 1. Creating Test Scripts (TypeScript/Node.js): 
 
     - Use TypeScript for stronger typing and greater tooling support.
@@ -135,7 +135,7 @@ The project is built on three core pillars:
 
     - Utility/Helper Functions: Reusable logic that is not specific to a page, such as developing a random zip code for a checkout form, is stored in a separate utils directory.  This keeps Page Objects lean and focused on their primary function: interacting with UI elements.
 
-# Strategic Decisions
+### Strategic Decisions
 Aside from the fundamental design, some important decisions were made to handle sophisticated scenarios and ensure the test suite is robust:
     
     - Handling the Performance Glitch User: Rather of utilizing a static waitForTimeout() function, which can make testing slow and unreliable, use Playwright's built-in auto-waiting feature.  Playwright intelligently waits for items to become visible and actionable before taking an action, automatically mitigating performance lag without relying on fragile, hardcoded delays.
