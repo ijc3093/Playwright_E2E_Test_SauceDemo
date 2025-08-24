@@ -1,9 +1,9 @@
 <!-- README.md -->
-# Sauce Labs Playwright Test Suite
+### Sauce Labs Playwright Test Suite
 
 This project is a full Playwright test suite for the Sauce Labs sample e-commerce website.  It is built on a long-term, maintainable architecture that employs best practices such as the Page Object Model (POM), custom fixtures, and utility functions.
 
-# Project Setup 
+### Project Setup 
 Step-by-step about how to install Using the init command
     Node.js: Ensure you have Node.js installed.
     A code editor: Visual Studio Code is recommended.
@@ -19,13 +19,13 @@ Step-by-step about how to install Using the init command
     npm init playwright@latest
 
 
-## Setup Instructions
+### Setup Instructions
 
 1.  **Clone the repository:**
     `git clone <repository-url>`
 
 2.  **Navigate to the project directory:**
-    `cd sauce-labs-playwright-test`
+    `cd Playwright_E2E_Test_SauceDemo`
 
 3.  **Install dependencies:**
     `npm install`
@@ -34,14 +34,14 @@ Step-by-step about how to install Using the init command
     - To run all tests: `npx playwright test`
     - To run tests in headed mode: `npx playwright test --headed`
 
-# Choose the default options:
+### Choose the default options:
 - Use TypeScript or JavaScript? TypeScript
 - Where to put your end-to-end tests? tests
 - Add a GitHub Actions workflow? Yes if you want
 - Install Playwright browsers? Yes
 - This will install @playwright/test and the necessary browser binaries
 
-# Using VS Code extension
+### Using VS Code extension
 1. Step 1: Create a new folder and open in VS Code
     - Go to Extensions section and install Playwright extension from Microsoft
     - Go to View tab and select "Command Palett.." to display "> Command Palette and type playwright >" then select select "install playwright"
@@ -55,7 +55,7 @@ Step-by-step about how to install Using the init command
     - For example: npx playwright test login.spec.ts while node login-test.ts.
     
     
-   # Inside that directory, you can run several commands:
+    ### Inside that directory, you can run several commands:
         cd tests 
         npx playwright test
             Except result: Runs the end-to-end tests...
@@ -90,7 +90,7 @@ Go to View > Command Palette and type playwright > select install playwright,
    This is for running the proejct
 
 
-## Project Architecture
+### Project Architecture
 The project is designed to be scalable and easy to manage, following a "Five-Year Philosophy."
 
 -   **tests/**: This directory contains all of the test files (*.spec.ts).  Each file focuses on a certain feature or user journey.  The tests themselves are clean and readable since they only include high-level steps and assertions, abstracting all implementation specifics.
@@ -100,7 +100,7 @@ The project is designed to be scalable and easy to manage, following a "Five-Yea
     -   `priceCalculator.ts` is a helpful function for performing difficult calculations while keeping the test logic clean.
 -   **fixtures/**: This category provides custom Playwright fixtures.  The usage of fixtures (e.g., `loggedInPage`) helps us to easily manage test state and prevent duplicate setup code (such as logging in) across several tests, encouraging the DRY (Don't Repeat Yourself) concept.
 
-## Strategic Decisions
+### Strategic Decisions
 
 ### Advanced Scenario 1: Handling Problematic UI (`problem_user`)
 
@@ -114,22 +114,10 @@ The `performance_glitch_user` causes severe slowness.  The strategy is to use Pl
 
 This method eliminates the need for brittle, hardcoded `page.waitForTimeout(milliseconds)` calls, which are a common source of flakiness in automated tests.  The test for this user is written in the same manner as any other test, and Playwright's inherent resilience elegantly handles the performance lag, providing dependability and stability.
 
-```typescript
-// pages/LoginPage.ts
-import { Page, expect, Locator } from '@playwright/test';
-
-/**
- * Represents the login page.
- * Implements the Page Object Model pattern.
- */
-
-
-# Architecture Screen
-![Screenshot](https://github.com/ijc3093/sauce_demo_playwright_typescript/blob/master/Blank%20Diagram.svg)
 
 Here is an architectural explanation of how to automate testing for SauceDemo Swag Labs with Playwright, a browser, TypeScript, and Node.js:
 
-# Core components and their interactions
+### Core components and their interactions
 The architecture is based on the interaction of these components:
 - TypeScript: A superset of JavaScript that provides static typing to improve code maintainability and debugging.
 - CLI (Command Line Interface): Used to run Playwright tests and maybe configure test runs (e.g., certain browsers, parallelism).
@@ -137,7 +125,7 @@ The architecture is based on the interaction of these components:
 - Browser: The web browser (Chromium, Firefox, Safari, etc.) in which the tests are executed.
 - Node.js: The JavaScript runtime environment that runs between Playwright and TypeScript code using Visual Studio Code.
 
-# How these components interact as follows:
+### How these components interact as follows:
 1. Creating Test Scripts (TypeScript/Node.js): 
     - Use TypeScript for stronger typing and greater tooling support.
     - These scripts define the actions that will be done on the SauceDemo application (for example, login, sorting the price, asce and desc, add items to cart, and checkout) as well as the expected results.
@@ -155,7 +143,7 @@ The architecture is based on the interaction of these components:
     - These assertions will automatically retry until the desired condition is met or a timeout occurs, decreasing flakiness in testing.
 
 
-# Testing Product Images are wrong for the problem_user
+### Testing Product Images are wrong for the problem_user
 1. Visual regression testing
 
     - Visual regression testing is the most robust and reliable testing approach for a SauceDemo user like the "problem_user" who purposely breaks product graphics.
@@ -165,3 +153,16 @@ The architecture is based on the interaction of these components:
     - Detection: When the same test is repeated for the problem_user, the visual regression tool will generate a fresh screenshot. The comparison would fail immediately because the broken image would be visually distinct from the baseline, indicating the issue.
 
     - Why it is ideal: This method improves a simple functional check since it analyzes the actual visual result displayed to the user, rather than simply the underlying code or a specific URL.  It can detect subtle errors such as layout modifications, stylistic difficulties, or unexpected image changes that might otherwise go undetected (img.src). ToContain('broken_url') may miss.
+
+```typescript
+// pages/LoginPage.ts
+import { Page, expect, Locator } from '@playwright/test';
+
+/**
+ * Represents the login page.
+ * Implements the Page Object Model pattern.
+ */
+
+
+### Architecture Screen
+![Screenshot](https://github.com/ijc3093/Playwright_E2E_Test_SauceDemo/blob/master/Blank%20Diagram.svg)
