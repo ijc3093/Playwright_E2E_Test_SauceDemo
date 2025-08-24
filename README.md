@@ -154,6 +154,9 @@ The architecture is based on the interaction of these components:
 
     - Why it is ideal: This method improves a simple functional check since it analyzes the actual visual result displayed to the user, rather than simply the underlying code or a specific URL.  It can detect subtle errors such as layout modifications, stylistic difficulties, or unexpected image changes that might otherwise go undetected (img.src). ToContain('broken_url') may miss.
 
+### Architecture Screen
+![Screenshot](https://github.com/ijc3093/Playwright_E2E_Test_SauceDemo/blob/master/Blank%20Diagram.svg)
+
 ```typescript
 // pages/LoginPage.ts
 import { Page, expect, Locator } from '@playwright/test';
@@ -164,5 +167,3 @@ import { Page, expect, Locator } from '@playwright/test';
  */
 
 
-### Architecture Screen
-![Screenshot](https://github.com/ijc3093/Playwright_E2E_Test_SauceDemo/blob/master/Blank%20Diagram.svg)
